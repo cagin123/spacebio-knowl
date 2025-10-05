@@ -8,6 +8,8 @@ import { Card } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
+import { ArrowLeft, Home } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const CATEGORY_COLORS = {
   Experiment: 0x1f77b4,
@@ -316,6 +318,12 @@ export default function KnowledgeGraphExplorer3D() {
     <div className="h-screen flex flex-col bg-background text-foreground">
       {/* Header */}
       <div className="p-4 flex items-center gap-4 border-b border-border bg-card/50 backdrop-blur-sm">
+        <Button asChild variant="ghost" size="sm" className="mr-2">
+          <Link to="/">
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to Home
+          </Link>
+        </Button>
         <h1 className="text-xl font-semibold bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
           Knowledge Graph Explorer 3D
         </h1>
